@@ -1,9 +1,62 @@
-/* Here we can set styles for this lab page that we don't want to effect others pages */
+/* we can use a single css file to style all the files in our wwebsite */
+
+/* you can pick your own background colors, text colors, and fonts */
+
+/* we can select an html element tag, in this case "body" will apply to the whole document */
+body {
+  background-color: #e2ecf3;
+}
+
+/* we can have rules apply to multiple elements at the same time with commas */
+h1 {
+  font-family: sans-serif;
+  color: rgb(237, 244, 250);
+}
+
+/* we can have rules apply to multiple elements at the same time with commas */
+h2,h3 {
+  font-family: sans-serif;
+  color: #0c56b6
+}
+
+/* and we can have rules that overlap other rules, both take effect */
+h1 {
+  letter-spacing: 5px;
+  word-spacing: 5px;
+  font-size: 200%;
+}
+
+/* the hashtag in a CSS selector selects an element by id, e.g., id="content" */
+#content {
+  margin: 10px;
+  padding: 10px;
+  border: solid 1px #f9ffac;
+  background-color: #4379b6;
+}
 
 /* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
 .minor-section {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: solid 1px #888;
-    background-color: #DDD8C4;
-  }
+  padding: 10px;
+  margin-bottom: 10px;
+  border: solid 1px #fff0c0;
+  background-color: #b9e2e4;
+}
+
+.minor-section {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: solid 1px #f3f3f1;
+  background-color: #b9d4ec;
+}
+
+.my-photo {
+  max-width: 900px;
+  max-height: 600px;
+  display: block;  /* Makes the image a block-level element */
+  margin: 0 auto;  /* Centers the image if it's smaller than its container */
+}
+
+.minor-section p {
+  color: #0c56b6;  /* This is just an example color (a shade of orange). You can replace it with any valid color value you prefer. */
+  font-size: 20px ;
+}
