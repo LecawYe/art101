@@ -16,7 +16,13 @@ h1 {
 /* we can have rules apply to multiple elements at the same time with commas */
 h2,h3 {
   font-family: sans-serif;
-  color: #0c56b6
+  color: #60b16e
+}
+
+/* we can have rules apply to multiple elements at the same time with commas */
+line {
+  font-family: sans-serif;
+  color: #60b16e
 }
 
 /* and we can have rules that overlap other rules, both take effect */
@@ -31,7 +37,7 @@ h1 {
   margin: 10px;
   padding: 10px;
   border: solid 1px #f9ffac;
-  background-color: #4379b6;
+  background-color: #6aa877;
 }
 
 /* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
@@ -39,14 +45,14 @@ h1 {
   padding: 10px;
   margin-bottom: 10px;
   border: solid 1px #fff0c0;
-  background-color: #b9e2e4;
+  background-color: #98d18d;
 }
 
 .minor-section {
   padding: 10px;
   margin-bottom: 10px;
   border: solid 1px #f3f3f1;
-  background-color: #b9d4ec;
+  background-color: #f0f7d8;
 }
 
 .my-photo {
@@ -57,6 +63,11 @@ h1 {
 }
 
 .minor-section p {
-  color: #0c56b6;  /* This is just an example color (a shade of orange). You can replace it with any valid color value you prefer. */
+  color: #507559;  /* This is just an example color (a shade of orange). You can replace it with any valid color value you prefer. */
   font-size: 20px ;
+}
+
+.myprofilepicture{
+  width: 450px; 
+  height: 600px;
 }
