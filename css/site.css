@@ -66,6 +66,11 @@ body {
     color: #507559;  /* This is just an example color (a shade of orange). You can replace it with any valid color value you prefer. */
     font-size: 20px ;
   }
+
+  .minor-section li {
+    color: #507559;  /* This is just an example color (a shade of orange). You can replace it with any valid color value you prefer. */
+    font-size: 20px ;
+  }
   
   .myprofilepicture{
     width: 450px; 
