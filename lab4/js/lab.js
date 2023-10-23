@@ -1,7 +1,7 @@
 // Rock-Paper-Scissors
 // An implementation of the game
 // Yihan Wang <ywang942@ucsc.edu>
-// Oct 22
+// Oct 22 2023
 
 //Explain the rules
 //Accepts user input
