@@ -86,3 +86,27 @@ h1 {
   width: 450px; 
   height: 600px;
 }
+
+.container{
+  display: flex;
+  align-items: center;s
+  gap: 0px;
+}
+
+.container img{
+  width: 50%;
+  max-width:400px;
+  height: auto;
+}
+
+
+.container .box1, .box2{
+  float: left;
+  width: 45%;
+  margin: 2%
+}
+
+.code pre{
+  width: 270px;
+  height: 468px;
+}
