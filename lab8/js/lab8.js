@@ -1,24 +1,40 @@
-/**
- * Author: Yihan Wang
- * Created: 11.03.2023
- *
- * (c) Copyright by Yihan Wang.
- **/
+/* * Author: Yihan Wang
+ * Created: 11.06.2023
+ * (c) Copyright by Yihan Wang. */ 
 
-// Create an array of numbers
-var numbersArray = [10, 20, 30, 40, 50];
 
-// Define a named function to calculate the square of a number
-function calculateSquare(x) {
-    return x * x;
+// A function to return the square root of a number
+function squareRoot(x) {
+  return Math.sqrt(x);
 }
 
-// Use map with the named function as a callback to get an array of squares
-var squares = numbersArray.map(calculateSquare);
-console.log('Squares:', squares);
+//testing
+console.log('Square root of 4 is', squareRoot(4));
+console.log('Square root of 16 is', squareRoot(16));
 
-// Use map with an anonymous function as a callback to get an array of half values
-var halfValues = numbersArray.map(function(x) {
-    return x / 2;
+
+// Test the function with an array of numbers using map
+const numbersArray = [1, 2, 3, 4, 5];
+const sqrtResults = numbersArray.map(squareRoot);
+console.log('Square roots:', sqrtResults);
+
+// An example using an anonymous function with map to square each number
+const squaredResults = numbersArray.map(function(x) {
+  return x * x;
 });
-console.log('Half Values:', halfValues);
+console.log('Squared:', squaredResults);
+
+// Output results to the webpage
+const outputEl = document.getElementById("output");
+outputEl.innerHTML = "Square roots: " + sqrtResults.join(", ") + "<br>Squared: " + squaredResults.join(", ");
+
+// Custom function that applies a callback to each element of an array
+function customFunction(arr, callback) {
+  return arr.map(callback);
+}
+
+// Example usage of customFunction
+const customResults = customFunction(numbersArray, function(x) {
+  return x + 10; // Example operation: add 10 to each number
+});
+console.log('Custom function results:', customResults);
