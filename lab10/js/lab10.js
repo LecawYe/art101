@@ -31,3 +31,9 @@ $("#make-convo").click(function(){
         }
     });
 });
+// "For the bonus task in our JavaScript web lab, we've implemented a novel feature that allows users to actively participate in the dialogue. This enhancement involves an input 
+//field and a send button, enabling users to contribute their own text to the conversation. Unlike the main task, where the dialogue was generated randomly, this feature empowers 
+//users to input custom text, adding a unique and personal dimension to the interaction. The user's input is then displayed alongside the computer-generated text, creating a more dynamic and 
+//engaging conversation. This input field introduces a real-time, interactive component to the web page, showcasing how JavaScript can be used to create a more immersive and user-driven experience. 
+//It exemplifies the potential of web programming in enhancing user engagement and interactivity, transforming a static page into a platform for lively and personalized communication."
+
