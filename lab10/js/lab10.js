@@ -8,7 +8,7 @@
 */
 
 function generateRandomText() {
-    const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+    const text = ["Hello there!", "How are you?", "Nice to meet you!", "What's up?", "Have a great day!"];
     const min = 3;
     const max = 100;
     const randLen = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -18,9 +18,9 @@ function generateRandomText() {
     return text.slice(randStart, randStart + randLen);
   }
 
-  // click listener for button
-  $("#make-convo").click(function(){
-    const newText = generateRandomText();
-    $("#output").append('<div class="text"><p>' + newText + '</p></div>');
+  $(document).ready(function() {
+    $("#generate-button").click(function() {
+        const dialogue = generateRandomText();
+        $("#output").text(dialogue);
+    });
 });
-
