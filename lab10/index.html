@@ -1,54 +1,44 @@
+<!DOCTYPE html>
 <html>
-	<head>
-	<!-- This title is used for tabs and bookmarks -->
-		<title>Lab 10 - JavaScript for the Web</title>
-		<script src ='js/lab10.js' defer></script>
-	<!-- Use UTF character set, a good idea with any webpage -->
-	<meta charset="UTF-8" />
-	<!-- Set viewport so page remains consistently scaled w narrow devices -->
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
-	<!-- Include a sitewide CSS file for consistent styling across the site -->
-	<link rel="stylesheet" type="text/css" href="../css/site.css">
-	<!-- Lab-specifc CSS file for any special styling of this particular page -->
-	<link rel="stylesheet" type="text/css" href="css/lab.css">
-	
-	<!-- load jQuery library to make javascript easier (must be above our lab js)-->
-	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-	<!-- Link to javascript file - DEFER waits until all elements are rendered -->
-	<script type="text/javascript" src="./js/lab.js" DEFER></script>
+<head>
+    <title>Lab 10 - JavaScript for the Web</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/site.css">
+    <link rel="stylesheet" type="text/css" href="css/lab.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="js/lab.js" defer></script>
 </head>
 <body>
-	<!-- Style this page by changing the CSS in ../css/site.css or css/lab.css -->
-	<main id="content">
-		<section>
-			<h1>Lab 10 - JavaScript for the Web</h1>
-			<div class="minor-section">
-				<div id="challenge" class="special-section">Challenge Section</div>
-					<p>The jQuery is a neww thing that challenge me. Everything is all new to me, but I enjoy this challenge.</p>
-			</div>
+    <main id="content">
+        <section>
+            <h1>Lab 10 - JavaScript for the Web</h1>
 
-			<div class="minor-section">
-				<div id="problems" class="special-section">Problems Section</div>
-					<p>The problem I got is that when I write down the jQuery in lab9.js, the website didn't work. So I figure out that I also need to add something in html, so now the problem have solved. </p>
-			</div>
+            <!-- Challenge Section -->
+            <div class="minor-section">
+                <div id="challenge" class="special-section">Challenge Section</div>
+                <p>The jQuery is a new thing that challenges me. Everything is new to me, but I enjoy this challenge.</p>
+            </div>
 
-			<div class="minor-section">
-				<div id="results" class="special-section">Results Section</div>
-					<p> The following tasks are doing well.</p>
-					<div id="output"></div>
-			</div>
+            <!-- Problems Section -->
+            <div class="minor-section">
+                <div id="problems" class="special-section">Problems Section</div>
+                <p>The problem I got is that when I write down the jQuery in lab9.js, the website didn't work. So I figured out that I also need to add something in HTML, so now the problem has been solved.</p>
+            </div>
 
-			
-					<div id="output">
-						<script type="text/javascript" src="js/lab9.js"></script>
-						
-					</div>
-	
-		</section>
-		<nav id="links">
-			<!-- Put links to other pages (including the homepage) here. -->
-		</nav>
-	</main>
+            <!-- Results Section -->
+            <div class="minor-section">
+                <div id="results" class="special-section">Results Section</div>
+                <p>The following tasks are doing well.</p>
+                <div id="output"></div>
+                <!-- Button under the output div -->
+                <button id="make-convo">Say Something</button>
+            </div>
+        </section>
+        
+        <nav id="links">
+            <!-- Put links to other pages (including the homepage) here. -->
+        </nav>
+    </main>
 </body>
 </html>
