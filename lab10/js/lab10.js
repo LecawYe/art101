@@ -22,4 +22,12 @@ $("#make-convo").click(function(){
     const newText = generateRandomText();
     $("#output").append('<div class="text"><p>' + newText + '</p></div>');
     
+
+    $("#submit-button").click(function() {
+        const userInput = $("#user-input").val();
+        if (userInput) {
+            $("#output").append('<div class="text user-text"><p>' + userInput + '</p></div>');
+            $("#user-input").val(''); // Clear the input field after sending
+        }
+    });
 });
