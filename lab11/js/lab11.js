@@ -47,11 +47,26 @@ $("#action2").click(function() {
 });
 
 // Implementing a "glitch" effect
-function glitchEffect() {
-    // Simple glitch effect: randomly change background color
-    const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-    $("body").css("background-color", randomColor);
+// Existing code...
+
+// Function to create a more noticeable glitch effect
+function enhancedGlitchEffect() {
+    // Example: Toggle a class that changes styles drastically
+    $('body').toggleClass('glitch-style');
 }
 
-// Trigger the glitch effect every 5 seconds
-setInterval(glitchEffect, 5000);
+// Apply a set of styles when the glitch effect is active
+$('<style>')
+    .prop('type', 'text/css')
+    .html(`
+        .glitch-style {
+            /* Example styles for glitch effect */
+            filter: invert(100%);
+            transform: rotate(1deg);
+        }
+    `)
+    .appendTo('head');
+
+// Trigger the enhanced glitch effect every 3 seconds
+setInterval(enhancedGlitchEffect, 3000);
+
