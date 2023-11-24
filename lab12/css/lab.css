@@ -1,3 +1,18 @@
+/* Styles for the header or title */
+header, #challenge {
+    background-color: #4CAF50; /* Example header background color */
+    color: white; /* Color for the text inside the header */
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Styles for the main title h1 */
+h1 {
+    color: white; /* Color for the h1 text */
+    /* You can add more styles for the h1 tag here */
+}
+
+/* Existing styles */
 .text p {
     display: inline-block;
     max-width: 60%;
@@ -8,7 +23,8 @@
     color: lightseagreen;
     font-family: sans-serif;
     font-size: 0.8em;
-  }
+}
+
 #output p:nth-child(odd) {
     text-align: left;
     background-color: lightblue;
@@ -23,6 +39,4 @@
     border-radius: 10px;
 }
 
-/* 
-This CSS will align every odd <p> element to the left and every even <p> element to the right, simulating a text message conversation. You can adjust the colors and styling as needed.}
- */
+/* Additional styles for the header or other sections can be added here */
