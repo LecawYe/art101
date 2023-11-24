@@ -1,16 +1,10 @@
 /*
-   lab.js - This simple JavaScript/jQuery script appends new elements to an output div
+    lab.js - Sorting Hat function to sort a name into a Hogwarts house.
 
    Requirements: jQuery must be loaded for this script to work.
 
    Author: YiHan Wang
    Date: 11/23/2023
-*/
-/*
-    lab.js - Sorting Hat function to sort a name into a Hogwarts house.
-
-    Author: [Your Name]
-    Date: [Date]
 */
 
 
