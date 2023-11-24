@@ -32,3 +32,8 @@ function sortingHat(str) {
     return houses[mod];
 }
 
+$("#button").click(function() {
+    const name = $("#input").val();
+    const house = sortingHat(name);
+    $("#output").html('<p>The Sorting Hat has sorted you into ' + house.name + ': ' + house.description + '</p>');
+});
