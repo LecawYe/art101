@@ -1,0 +1,28 @@
+.text p {
+    display: inline-block;
+    max-width: 60%;
+    margin: 3px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: burlywood;
+    color: lightseagreen;
+    font-family: sans-serif;
+    font-size: 0.8em;
+  }
+#output p:nth-child(odd) {
+    text-align: left;
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#output p:nth-child(even) {
+    text-align: right;
+    background-color: lightgreen;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* 
+This CSS will align every odd <p> element to the left and every even <p> element to the right, simulating a text message conversation. You can adjust the colors and styling as needed.}
+ */
