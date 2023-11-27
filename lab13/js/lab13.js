@@ -12,6 +12,8 @@ function fizzBuzzBoom() {
     let buzzFactor = parseInt(document.getElementById("factorBuzz").value, 10);
     let boomFactor = parseInt(document.getElementById("factorBoom").value, 10);
 
+    console.log("Max Num:", maxNum, "Fizz Factor:", fizzFactor, "Buzz Factor:", buzzFactor, "Boom Factor:", boomFactor); // Debugging line
+
     if (isNaN(maxNum) || isNaN(fizzFactor) || isNaN(buzzFactor) || isNaN(boomFactor)) {
         console.error("One of the input values is not a number.");
         return;
