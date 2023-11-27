@@ -20,7 +20,7 @@ h1 {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     width: 100%;
     max-width: 400px;
-    margin: 20px;
+    margin: 20px auto;
     box-sizing: border-box;
 }
 
@@ -37,6 +37,7 @@ h1 {
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
+    transition: border-color 0.3s ease;
 }
 
 .form-container input:focus {
@@ -53,11 +54,14 @@ h1 {
     color: white;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
     box-sizing: border-box;
 }
 
-.form-container button:hover {
+.form-container button:hover,
+.form-container button:focus {
     background-color: #0056b3;
+    outline: none;
 }
 
 #output {
@@ -68,4 +72,10 @@ h1 {
     background-color: #fff;
     box-sizing: border-box;
     overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+    }
 }
