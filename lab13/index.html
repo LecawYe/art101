@@ -5,31 +5,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="css/lab.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script type="text/javascript" src="js/lab13.js" defer></script>
 </head>
 <body>
     <h1>Lab 13: FizzBuzzBoom</h1>
     
     <main id="content">
-        <!-- Challenge Section -->
         <div class="minor-section">
             <div id="challenge" class="special-section">Challenge Section</div>
             <p>For me, It is still pretty challenging to use loop function in JavaScript </p>
         </div>
 
-        <!-- Problems Section -->
         <div class="minor-section">
             <div id="problems" class="special-section">Problems Section</div>
-            <p></p>There was a while that the output is not shown after I click the button, I had to make adjustment to make it work.
+            <p>There was a while that the output is not shown after I click the button, I had to make adjustment to make it work.</p>
         </div>
 
-        <!-- Results Section -->
         <div class="minor-section">
             <div id="Result" class="special-section">Results Section</div>
             <p>The following tasks are doing well.</p>
         </div>
     </main>
+
     <div class="form-container">
+        <!-- Form fields for Bonus Task -->
         <label for="maxNumber">Max Number:</label>
         <input type="number" id="maxNumber" value="200"><br>
 
@@ -42,9 +42,13 @@
         <label for="factorBoom">Boom Factor:</label>
         <input type="number" id="factorBoom" value="7"><br>
 
-        <button onclick="fizzBuzzBoom()">Run FizzBuzzBoom</button>
+        <button id="runFizzBuzzBoom">Run FizzBuzzBoom</button>
     </div>
+
     <div id="output"></div>
+
+    <script>
+        document.getElementById("runFizzBuzzBoom").addEventListener("click", fizzBuzzBoom);
+    </script>
 </body>
 </html>
-
