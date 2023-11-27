@@ -4,28 +4,21 @@
     Date: [Date]
 */
 // In lab.js - top of the file
-const FACTORS = {
-    3: "Fizz",
-    5: "Buzz",
-    7: "Boom",
-    // Add new factors here
-};
-
-// Modify the fizzBuzzBoom function to use these factors
-
 function fizzBuzzBoom() {
-    let oneLongString = "";
-    for (let num = 1; num <= 200; num++) {
-        let output = num + " ";
+    let maxNum = parseInt(document.getElementById("maxNumber").value);
+    let fizzFactor = parseInt(document.getElementById("factorFizz").value);
+    let buzzFactor = parseInt(document.getElementById("factorBuzz").value);
+    let boomFactor = parseInt(document.getElementById("factorBoom").value);
 
-        if (num % 3 === 0) output += "Fizz";
-        if (num % 5 === 0) output += "Buzz";
-        if (num % 7 === 0) output += "Boom";
+    let output = "";
+    for (let i = 1; i <= maxNum; i++) {
+        let result = "";
 
-        oneLongString += output + "<br>";
+        if (i % fizzFactor === 0) result += "Fizz!";
+        if (i % buzzFactor === 0) result += "Buzz!";
+        if (i % boomFactor === 0) result += "Boom!";
+
+        output += (result || i) + "<br>";
     }
-    $("#output").html(oneLongString);
+    document.getElementById("output").innerHTML = output;
 }
-
-// Call the function
-fizzBuzzBoom();
