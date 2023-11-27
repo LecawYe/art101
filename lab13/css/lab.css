@@ -5,11 +5,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #e9ecef; /* Updated background color */
+    background-color: #fafafa; /* A classic light grey background for a subtle look */
 }
 
 h1 {
-    color: #007bff; /* Bright blue for the heading to stand out */
+    color: #5D5C61; /* A classic dark slate color for the heading */
     margin: 20px 0;
 }
 
@@ -41,9 +41,9 @@ h1 {
 }
 
 .form-container input:focus {
-    border-color: #80bdff; /* Light blue border for input focus */
+    border-color: #9EADC8; /* A light blue border for input focus */
     outline: none;
-    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25); /* Adding a glow effect on focus */
+    box-shadow: 0 0 0 0.2rem rgba(142, 168, 209, .5); /* Adding a subtle glow effect on focus */
 }
 
 .form-container button {
@@ -51,7 +51,7 @@ h1 {
     padding: 10px;
     border: none;
     border-radius: 4px;
-    background-color: #007bff; /* Keeping the button blue to match the heading */
+    background-color: #6C757D; /* A subdued button color for a classic look */
     color: white;
     font-size: 16px;
     cursor: pointer;
@@ -61,7 +61,7 @@ h1 {
 
 .form-container button:hover,
 .form-container button:focus {
-    background-color: #0056b3; /* Darker blue on hover for the button */
+    background-color: #5A6268; /* A slightly darker shade on hover for the button */
     outline: none;
 }
 
@@ -70,20 +70,19 @@ h1 {
     border: 1px solid #ddd;
     padding: 10px;
     width: calc(100% - 42px);
-    background-color: #f8f9fa; /* Light background for the output to differentiate from the page background */
+    background-color: #EFEFEF; /* A light background for the output to subtly stand out */
     box-sizing: border-box;
     overflow-wrap: break-word;
 }
 
 #output div {
-    padding: 3px 0; /* Adds a little space above and below each line */
-    font-family: monospace; /* Gives a typewriter-like font that's often used for code */
+    padding: 3px 0;
+    font-family: monospace;
 }
 
-/* Optional: Add a class for special outputs to style them differently */
 .special-output {
     font-weight: bold;
-    color: #28a745; /* A green color to highlight the FizzBuzzBoom results */
+    color: #78909C; /* A classic blue color for special output to draw attention */
 }
 
 @media (max-width: 768px) {
