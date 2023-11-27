@@ -1,0 +1,10 @@
+/* In style.css, add styles for the output columns */
+#output {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#output p {
+    flex: 1 1 200px; /* Adjust the flex-basis as needed for column width */
+}
