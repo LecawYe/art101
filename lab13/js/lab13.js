@@ -5,10 +5,17 @@
 */
 
 function fizzBuzzBoom() {
+    console.log("FizzBuzzBoom function called"); // Debugging line
+
     let maxNum = parseInt(document.getElementById("maxNumber").value, 10);
     let fizzFactor = parseInt(document.getElementById("factorFizz").value, 10);
     let buzzFactor = parseInt(document.getElementById("factorBuzz").value, 10);
     let boomFactor = parseInt(document.getElementById("factorBoom").value, 10);
+
+    if (isNaN(maxNum) || isNaN(fizzFactor) || isNaN(buzzFactor) || isNaN(boomFactor)) {
+        console.error("One of the input values is not a number.");
+        return;
+    }
 
     $("#output").empty(); // Clear previous results
 
