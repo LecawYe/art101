@@ -79,3 +79,14 @@ h1 {
         width: 90%;
     }
 }
+
+#output div {
+    padding: 3px 0; /* Adds a little space above and below each line */
+    font-family: monospace; /* Gives a typewriter-like font that's often used for code */
+}
+
+/* Optional: Add a class for special outputs to style them differently */
+.special-output {
+    font-weight: bold;
+    color: #007bff;
+}

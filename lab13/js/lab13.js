@@ -12,16 +12,26 @@ function fizzBuzzBoom() {
 
     let output = document.getElementById("output");
     output.innerHTML = ''; // Clear previous results
+// ...inside the loop in fizzBuzzBoom function
+    let textNode = document.createElement('div');
+        if (result) {
+            textNode.classList.add('special-output');
+        }
+    textNode.innerText = displayText;
+    output.appendChild(textNode);
 
     for (let i = 1; i <= maxNum; i++) {
         let result = '';
+        let displayText = '';
 
         if (i % fizzFactor === 0) result += 'Fizz';
         if (i % buzzFactor === 0) result += 'Buzz';
         if (i % boomFactor === 0) result += 'Boom';
 
+        displayText = result ? `${i} - ${result}!` : i; // Add exclamation mark if there's a result
+
         let textNode = document.createElement('div');
-        textNode.innerHTML = result || i;
+        textNode.innerText = displayText;
         output.appendChild(textNode);
     }
 }
