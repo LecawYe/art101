@@ -5,11 +5,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f4f4f4;
+    background-color: #e9ecef; /* Updated background color */
 }
 
 h1 {
-    color: #333;
+    color: #007bff; /* Bright blue for the heading to stand out */
     margin: 20px 0;
 }
 
@@ -27,22 +27,23 @@ h1 {
 .form-container label {
     display: block;
     margin-bottom: 5px;
-    color: #555;
+    color: #495057; /* Dark gray color for the labels for better readability */
 }
 
 .form-container input {
     width: calc(100% - 22px);
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ddd;
+    border: 2px solid #ced4da; /* Slightly thicker border with a light gray color */
     border-radius: 4px;
     box-sizing: border-box;
     transition: border-color 0.3s ease;
 }
 
 .form-container input:focus {
-    border-color: #007bff;
+    border-color: #80bdff; /* Light blue border for input focus */
     outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25); /* Adding a glow effect on focus */
 }
 
 .form-container button {
@@ -50,7 +51,7 @@ h1 {
     padding: 10px;
     border: none;
     border-radius: 4px;
-    background-color: #007bff;
+    background-color: #007bff; /* Keeping the button blue to match the heading */
     color: white;
     font-size: 16px;
     cursor: pointer;
@@ -60,7 +61,7 @@ h1 {
 
 .form-container button:hover,
 .form-container button:focus {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Darker blue on hover for the button */
     outline: none;
 }
 
@@ -69,15 +70,9 @@ h1 {
     border: 1px solid #ddd;
     padding: 10px;
     width: calc(100% - 42px);
-    background-color: #fff;
+    background-color: #f8f9fa; /* Light background for the output to differentiate from the page background */
     box-sizing: border-box;
     overflow-wrap: break-word;
-}
-
-@media (max-width: 768px) {
-    .form-container {
-        width: 90%;
-    }
 }
 
 #output div {
@@ -88,5 +83,11 @@ h1 {
 /* Optional: Add a class for special outputs to style them differently */
 .special-output {
     font-weight: bold;
-    color: #007bff;
+    color: #28a745; /* A green color to highlight the FizzBuzzBoom results */
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+    }
 }
