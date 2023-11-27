@@ -1,15 +1,14 @@
 /*
     lab.js - FizzBuzzBoom program.
-    Author: [Your Name]
-    Date: [Date]
+    Author: Yihan Wang
+    Date: 11/27/2023
 */
 
-// In lab.js - top of the file
 function fizzBuzzBoom() {
     let maxNum = parseInt(document.getElementById("maxNumber").value, 10);
-    let fizzFactor = parseInt(document.getElementById("factorFizz").value, 10);
-    let buzzFactor = parseInt(document.getElementById("factorBuzz").value, 10);
-    let boomFactor = parseInt(document.getElementById("factorBoom").value, 10);
+    let fizzFactor = 3; // Fixed factor for "Fizz"
+    let buzzFactor = 5; // Fixed factor for "Buzz"
+    let boomFactor = 7; // Fixed factor for "Boom"
 
     console.log("fizzBuzzBoom function is called"); // Good for debugging
 
@@ -18,18 +17,15 @@ function fizzBuzzBoom() {
 
     for (let i = 1; i <= maxNum; i++) {
         let result = '';
-        let displayText = '';
-
         if (i % fizzFactor === 0) result += 'Fizz';
         if (i % buzzFactor === 0) result += 'Buzz';
         if (i % boomFactor === 0) result += 'Boom';
 
-        displayText = result ? `${i} - ${result}!` : `${i} - `; // Add exclamation mark if there's a result
+        // Create the text display for each line
+        let displayText = result ? `${i} - ${result}!` : i.toString();
 
+        // Create a div for each line and append to output
         let textNode = document.createElement('div');
-        if (result) {
-            textNode.classList.add('special-output');
-        }
         textNode.innerText = displayText;
         output.appendChild(textNode);
     }

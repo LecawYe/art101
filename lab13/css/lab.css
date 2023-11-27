@@ -5,7 +5,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fafafa; /* A classic light grey background for a subtle look */
+    background-color: #ff6767; /* A classic light grey background for a subtle look */
 }
 
 h1 {
@@ -14,7 +14,7 @@ h1 {
 }
 
 .form-container {
-    background: #fff;
+    background: rgb(255, 255, 255)5d5;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -61,7 +61,7 @@ h1 {
 
 .form-container button:hover,
 .form-container button:focus {
-    background-color: #5A6268; /* A slightly darker shade on hover for the button */
+    background-color: rgb(99, 104, 90)) 104, 97); /* A slightly darker shade on hover for the button */
     outline: none;
 }
 
