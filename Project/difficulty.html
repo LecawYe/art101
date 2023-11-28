@@ -3,15 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="difficulty.js"></script>
+
   <title>Choose Difficulty</title>
+  <!-- Add your CSS link here -->
 </head>
 <body>
   <h2>Choose Difficulty</h2>
-  <button id="easy">Easy</button>
-  <button id="medium">Medium</button>
-  <button id="hard">Hard</button>
+  <button onclick="startGame('easy')">Easy</button>
+  <button onclick="startGame('medium')">Medium</button>
+  <button onclick="startGame('hard')">Hard</button>
 
-  <script src="difficulty.js"></script>
+  <script>
+    function startGame(difficulty) {
+      localStorage.setItem('difficulty', difficulty);
+      window.location.href = 'game.html';
+    }
+  </script>
 </body>
 </html>

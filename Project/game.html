@@ -1,17 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Color Mixer</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Mixer</title>
+<style>
+  /* Add your CSS styles here */
+</style>
 </head>
 <body>
 <div id="colorMixerGame">
   <h1>Testing your color</h1>
-  <!-- The rest of your game content here -->
+
+  <!-- Random Color Display -->
+  <div id="randomColor" style="width:100px; height:100px;"></div>
+  <!-- User Color Mixing Palette -->
+  <div>
+    <label for="red">Red</label>
+    <input type="range" id="red" name="red" min="0" max="255">
+    <label for="green">Green</label>
+    <input type="range" id="green" name="green" min="0" max="255">
+    <label for="blue">Blue</label>
+    <input type="range" id="blue" name="blue" min="0" max="255">
+  </div>
+  <!-- Check and Reset Buttons -->
+  <button id="check">CHECK</button>
+  <button id="reset">RESET</button>
+  <!-- Match Percentage Display -->
+  <div id="matchPercentage"></div>
 </div>
 
-<script src="game.js"></script>
+<script>
+  // Add your JavaScript here
+</script>
+</body>
+</html>
+this is index html code:<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/lab.css">
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<title>Color Mixer</title>
+<!-- Add your CSS link here -->
+</head>
+<body>
+<h1>Color Mixer</h1>
+<a href="difficulty.html">Start Mixing Colors</a>
 </body>
 </html>

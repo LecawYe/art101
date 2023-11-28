@@ -8,10 +8,6 @@
 
 
 // 1. Create a function that takes in a number and returns the number times two. Then run the function and print the result.
-  // Define all your game logic here
-  // The current code seems to be a mix of placeholders and initial setup
-  // Define functions to generate random colors, set color sliders, etc.
-
 document.addEventListener('DOMContentLoaded', () => {
   const easyButton = document.getElementById('easy');
   const mediumButton = document.getElementById('medium');
