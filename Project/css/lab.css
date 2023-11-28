@@ -1,0 +1,92 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ff6767; /* A classic light grey background for a subtle look */
+}
+
+h1 {
+    color: #5D5C61; /* A classic dark slate color for the heading */
+    margin: 20px 0;
+}
+
+.form-container {
+    background: rgb(255, 255, 255)5d5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #495057; /* Dark gray color for the labels for better readability */
+}
+
+.form-container input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ced4da; /* Slightly thicker border with a light gray color */
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.form-container input:focus {
+    border-color: #9EADC8; /* A light blue border for input focus */
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(142, 168, 209, .5); /* Adding a subtle glow effect on focus */
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #6C757D; /* A subdued button color for a classic look */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-container button:hover,
+.form-container button:focus {
+    background-color: rgb(99, 104, 90)) 104, 97); /* A slightly darker shade on hover for the button */
+    outline: none;
+}
+
+#output {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: calc(100% - 42px);
+    background-color: #EFEFEF; /* A light background for the output to subtly stand out */
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+}
+
+#output div {
+    padding: 3px 0;
+    font-family: monospace;
+}
+
+.special-output {
+    font-weight: bold;
+    color: #78909C; /* A classic blue color for special output to draw attention */
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+    }
+}
