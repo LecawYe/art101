@@ -8,68 +8,91 @@
 
 
 // 1. Create a function that takes in a number and returns the number times two. Then run the function and print the result.
+  // Define all your game logic here
+  // The current code seems to be a mix of placeholders and initial setup
+  // Define functions to generate random colors, set color sliders, etc.
 
 document.addEventListener('DOMContentLoaded', () => {
+  const easyButton = document.getElementById('easy');
+  const mediumButton = document.getElementById('medium');
+  const hardButton = document.getElementById('hard');
+  const checkButton = document.getElementById('check');
+  const resetButton = document.getElementById('reset');
   const randomColorBox = document.getElementById('randomColor');
   const matchPercentageDisplay = document.getElementById('matchPercentage');
-  const difficulty = localStorage.getItem('difficulty') || 'easy';
+
   let randomColor = {};
-  let gameTimer;
+  let userColor = { red: 0, green: 0, blue: 0 };
+  let timeLimit;
 
   function generateRandomColor() {
-    // ... existing code to generate a random color
+    randomColor.red = Math.floor(Math.random() * 256);
+    randomColor.green = Math.floor(Math.random() * 256);
+    randomColor.blue = Math.floor(Math.random() * 256);
+    randomColorBox.style.backgroundColor = `rgb(${randomColor.red}, ${randomColor.green}, ${randomColor.blue})`;
   }
 
-  function calculateMatchPercentage(userColor) {
-    // ... existing code to calculate the match percentage
+  function setColorSliders() {
+    document.getElementById('red').value = userColor.red;
+    document.getElementById('green').value = userColor.green;
+    document.getElementById('blue').value = userColor.blue;
+    updateUserColorDisplay();
   }
 
-  function endGame() {
-    // Disable sliders and show the final match percentage
-    document.getElementById('red').disabled = true;
-    document.getElementById('green').disabled = true;
-    document.getElementById('blue').disabled = true;
-    const userColor = getUserColor();
-    const matchPercentage = calculateMatchPercentage(userColor);
-    matchPercentageDisplay.textContent = `Time's up! Match: ${matchPercentage}%`;
-  }
-
-  function getUserColor() {
-    return {
-      red: parseInt(document.getElementById('red').value, 10),
-      green: parseInt(document.getElementById('green').value, 10),
-      blue: parseInt(document.getElementById('blue').value, 10)
-    };
-  }
-
-  function startTimer(duration) {
-    gameTimer = setTimeout(endGame, duration);
-  }
-
-  function setupGame() {
-    generateRandomColor();
-    switch(difficulty) {
-      case 'medium':
-        startTimer(300000); // 5 minutes
-        break;
-      case 'hard':
-        startTimer(60000); // 1 minute
-        break;
-      // No timer for 'easy' difficulty
+  function updateUserColorDisplay() {
+    userColor.red = document.getElementById('red').value;
+    userColor.green = document.getElementById('green').value;
+    userColor.blue = document.getElementById('blue').value;
+    let userColorBox = document.getElementById('userColor');
+    if (!userColorBox) {
+      userColorBox = document.createElement('div');
+      userColorBox.id = 'userColor';
+      userColorBox.style.width = '100px';
+      userColorBox.style.height = '100px';
+      randomColorBox.insertAdjacentElement('afterend', userColorBox);
     }
+    userColorBox.style.backgroundColor = `rgb(${userColor.red}, ${userColor.green}, ${userColor.blue})`;
   }
 
-  document.getElementById('check').addEventListener('click', () => {
-    clearTimeout(gameTimer); // Stop the timer when the user checks the color
-    const userColor = getUserColor();
-    const matchPercentage = calculateMatchPercentage(userColor);
+  function calculateMatchPercentage() {
+    const redDiff = Math.abs(randomColor.red - userColor.red);
+    const greenDiff = Math.abs(randomColor.green - userColor.green);
+    const blueDiff = Math.abs(randomColor.blue - userColor.blue);
+    const difference = redDiff + greenDiff + blueDiff;
+    const maxDifference = 255 * 3;
+    return 100 - Math.floor((difference / maxDifference) * 100);
+  }
+
+  easyButton.addEventListener('click', () => {
+    timeLimit = Infinity; // No time limit for easy
+    generateRandomColor();
+  });
+
+  mediumButton.addEventListener('click', () => {
+    timeLimit = 300000; // 5 minutes for medium
+    generateRandomColor();
+  });
+
+  hardButton.addEventListener('click', () => {
+    timeLimit = 60000; // 1 minute for hard
+    generateRandomColor();
+  });
+
+  checkButton.addEventListener('click', () => {
+    const matchPercentage = calculateMatchPercentage();
     matchPercentageDisplay.textContent = `Match: ${matchPercentage}%`;
   });
 
-  document.getElementById('reset').addEventListener('click', () => {
-    clearTimeout(gameTimer);
-    setupGame(); // Reset the game
+  resetButton.addEventListener('click', () => {
+    userColor = { red: 0, green: 0, blue: 0 };
+    setColorSliders();
+    matchPercentageDisplay.textContent = '';
   });
 
-  setupGame(); // Initialize the game
+  // Set up the initial state
+  generateRandomColor();
+  setColorSliders();
+  ['red', 'green', 'blue'].forEach(color => {
+    document.getElementById(color).addEventListener('input', updateUserColorDisplay);
+  });
 });
