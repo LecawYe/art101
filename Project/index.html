@@ -1,54 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Lab 13</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="css/lab.css">
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script type="text/javascript" src="js/lab13.js" ></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/lab.css">
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script type="text/javascript" src="js/project.js" ></script>
+<title>Color Mixer</title>
+<style>
+  /* Add your CSS styles here */
+</style>
 </head>
 <body>
-    <h1>Lab 13: Loops</h1>
-    
-    <main id="content">
-        <div class="minor-section">
-            <div id="challenge" class="special-section">Challenge Section</div>
-            <p>For me, It is still pretty challenging to use loop function in JavaScript </p>
-        </div>
+<div id="colorMixerGame">
+  <h1>Color Mixer</h1>
+  <!-- Difficulty Buttons -->
+  <div>
+    <button id="easy">EASY</button>
+    <button id="medium">MEDIUM</button>
+    <button id="hard">HARD</button>
+  </div>
+  <!-- Random Color Display -->
+  <div id="randomColor" style="width:100px; height:100px;"></div>
+  <!-- User Color Mixing Palette -->
+  <div>
+    <label for="red">Red</label>
+    <input type="range" id="red" name="red" min="0" max="255">
+    <label for="green">Green</label>
+    <input type="range" id="green" name="green" min="0" max="255">
+    <label for="blue">Blue</label>
+    <input type="range" id="blue" name="blue" min="0" max="255">
+  </div>
+  <!-- Check and Reset Buttons -->
+  <button id="check">CHECK</button>
+  <button id="reset">RESET</button>
+  <!-- Match Percentage Display -->
+  <div id="matchPercentage"></div>
+</div>
 
-        <div class="minor-section">
-            <div id="problems" class="special-section">Problems Section</div>
-            <p>There was a while that the output is not shown after I click the button, I had to make adjustment to make it work.</p>
-        </div>
-
-        <div class="minor-section">
-            <div id="Result" class="special-section">Results Section</div>
-            <p>The following tasks are doing well.</p>
-        </div>
-    </main>
-
-    <div class="form-container">
-        <!-- Form fields for Bonus Task -->
-        <label for="maxNumber">Max Number:</label>
-        <input type="number" id="maxNumber" value="200"><br>
-
-        <label for="factorFizz">Fizz Factor:</label>
-        <input type="number" id="factorFizz" value="3"><br>
-
-        <label for="factorBuzz">Buzz Factor:</label>
-        <input type="number" id="factorBuzz" value="5"><br>
-
-        <label for="factorBoom">Boom Factor:</label>
-        <input type="number" id="factorBoom" value="7"><br>
-
-        <button id="runFizzBuzzBoom">Run FizzBuzzBoom</button>
-    </div>
-
-    <div id="output"></div>
-
-    <script>
-        document.getElementById("runFizzBuzzBoom").addEventListener("click", fizzBuzzBoom);
-    </script>
+<script>
+  // Add your JavaScript here
+</script>
 </body>
 </html>
