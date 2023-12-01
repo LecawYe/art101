@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e7f2f8; /* Light blue background for a fresh look */
+    margin: 0;
+    padding: 0;
+    color: #333333; /* Dark grey color for text */
+}
+
+main {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #ffffff; /* Keeping main content white for readability */
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); /* Adding a subtle shadow to main */
+}
+
+section {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px; /* Rounded corners for sections */
+}
+
+h1, h2 {
+    color: #2a87d0; /* A shade of blue for headers */
+}
+
+/* Styling for images */
+img {
+    width: 100%;
+    max-width: 400px; /* Set a max-width for images and make them responsive */
+    display: block;
+    margin: 10px 0;
+    border-radius: 4px; /* Rounded corners for images */
+}
+
+/* Style for paragraphs inside sections */
+section p {
+    color: #555; /* Slightly lighter color for paragraph text */
+    line-height: 1.6; /* Improved line spacing */
+}
