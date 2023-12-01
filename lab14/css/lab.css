@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #e7f2f8; /* Light blue background for a fresh look */
+    background-color: rgb(116, 194, 236); /* Light blue background for a fresh look */
     margin: 0;
     padding: 0;
     color: #333333; /* Dark grey color for text */
@@ -14,10 +14,10 @@ main {
 }
 
 section {
-    border: 1px solid #ddd;
+    border: 1px solid rgb(158, 200, 233);
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 5px; /* Rounded corners for sections */
+    border-radius: 20px; /* Rounded corners for sections */
 }
 
 h1, h2 {
